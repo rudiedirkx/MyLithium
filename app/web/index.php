@@ -33,6 +33,13 @@ require dirname(__DIR__) . '/config/bootstrap.php';
  * @see lithium\action\Dispatcher
  * @see lithium\net\http\Router
  */
-echo lithium\action\Dispatcher::run(new lithium\action\Request());
 
-?>
+$request = new lithium\action\Request();
+try {
+	echo lithium\action\Dispatcher::run($request);
+}
+catch ( \lithium\action\DispatchException $ex ) {
+	echo 'Invalid path: ' . $ex->getMessage();
+}
+
+

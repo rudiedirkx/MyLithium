@@ -14,13 +14,13 @@ use lithium\core\Environment;
  * its action called 'view', and we pass a param to select the view file
  * to use (in this case, /app/views/pages/home.html.php)...
  */
-Router::connect('/', array('Jobs::index'));
+Router::connect('/', 'Jobs::index');
 
 
 
-Router::connect('/category/:category', array('Categories::show'));
-Router::connect('/jobs/:id', array('Jobs::show'));
-Router::connect('/jobs/:company/:id/:location/:position', array('Jobs::show'));
+Router::connect('/category/:category', 'Categories::show');
+Router::connect('/jobs/:id', 'Jobs::show');
+Router::connect('/jobs/:company/:id/:location/:position', 'Jobs::show');
 
 
 
