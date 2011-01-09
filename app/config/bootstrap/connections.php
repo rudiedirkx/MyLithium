@@ -63,7 +63,7 @@ Connections::add('default', array(
 	'type' => 'database',
 	'adapter' => 'MySql',
 	'host' => 'localhost',
-	'login' => 'root',
+	'login' => 'blog',
 	'password' => '',
 	'database' => 'blog'
 ));

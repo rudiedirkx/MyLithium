@@ -5,3 +5,5 @@
         <p><?=$h($post->body)?></p>
     </article>
     <?php endforeach; ?>
+
+<pre><?=get_class($this)?></pre>
