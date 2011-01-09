@@ -8,6 +8,9 @@ class PostsController extends \lithium\action\Controller {
 
 	public function index() {
 		$posts = Post::all();
+		$posts = Post::find('all', array(
+			'conditions' => 'created between 0 and 1000'
+		));
 		return compact('posts');
 	}
 
