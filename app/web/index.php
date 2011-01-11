@@ -38,7 +38,7 @@ $request = new lithium\action\Request();
 try {
 	echo lithium\action\Dispatcher::run($request);
 }
-catch ( \lithium\action\DispatchException $ex ) {
+catch ( lithium\action\DispatchException $ex ) {
 	echo 'Invalid path: ' . $ex->getMessage();
 }
 
